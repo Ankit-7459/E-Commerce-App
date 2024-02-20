@@ -33,4 +33,8 @@ public class ProductService {
 		
 		return ProductRepo.findById(id);
 	}
+	public List<ProductInfo> getAllProductByCategoryId(Integer id){
+		
+		return ProductRepo.findAllByCategory_Id(id);
+	}
 }

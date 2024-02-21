@@ -1,5 +1,7 @@
 package com.nt.Model;
 
+import java.util.List;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
@@ -16,7 +19,7 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name="Users")
+@Table(name="users")
 public class User {
 
 	@Id
@@ -36,10 +39,26 @@ public class User {
 	@NotEmpty
 	private String password;
 	
-	@ManyToMany(cascade=CascadeType.MERGE,fetch=FetchType.EAGER)
-	@JoinTable(name="user_role",
-	joinColumns=(@JoinColumn(name="user_ID",reference)))
-	private list<Role> roles;
+	@ManyToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
+	@JoinTable(
+			name="user_role",
+	joinColumns= {@JoinColumn(name="user_ID", referencedColumnName="ID")},
+	 inverseJoinColumns= {@JoinColumn(name="Role_ID", referencedColumnName="ID")}
 	
+	)
+	private List<Role> roles;
+	
+	public User(User user) {
+		
+		this.firstName=user.getFirstName();
+		this.lastName=user.getLastName();
+		
+		this.email=user.getEmail();
+		this.password=user.getPassword();
+		this.roles=user.getRoles();
+	}
+	public User() {
+		
+	}
 }
 

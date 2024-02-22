@@ -8,6 +8,18 @@ public class ECommerceProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ECommerceProjectApplication.class, args);
+		
+System.out.println("Server Status On.......");
+		
+		System.out.println("");
+		System.out.println("	   			**         **  **********    ***");
+		System.out.println("				**         **  **            ***");
+		System.out.println("				**         **  **            ***");
+		System.out.println("				**         **  ******        ***");
+		System.out.println("				**   **    **  **            ***");
+		System.out.println("				** **   ** **  **            ************");
+		System.out.println("				***       ***  **********    ************");
+
 	}
 
 }

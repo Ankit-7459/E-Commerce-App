@@ -14,6 +14,7 @@ import com.nt.Model.Role;
 import com.nt.Model.User;
 import com.nt.Repository.RoleRepository;
 import com.nt.Repository.UserRepository;
+import com.nt.global.GlobalData;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -31,6 +32,7 @@ RoleRepository RoleRepository;
 
 @GetMapping("/login")
 public String Login() {
+	GlobalData.cart.clear();
 	return"login";
 }
 

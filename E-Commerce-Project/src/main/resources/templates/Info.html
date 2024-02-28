@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+     <style>
+     footer{background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  
+    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); 
+ 
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;}
+    
+    </style>
+<body>
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary" >
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img th:src="@{/images/ecomarcelogo.png}"  src="../static/images/ecomarcelogo.png" width="auto" height="50" class="d-inline-block align-top" alt=""/><span>AnkitMagaMart</span>
+        </a>
+        <button class="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active ">
+                    <a class="nav-link " th:href="@{/}" href="#">home</a>
+                </li>
+                 <li class="nav-item active ">
+                    <a class="nav-link " th:href="@{/Helper}" href="#">AboutInfo</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link " th:href="@{/shop}" href="#">shop</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link " sec:authorize="isAnonymous()" th:href="@{/login}" href="#">login</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link " sec:authorize="isAuthenticated()" th:href="@{/logout}" href="#">logout</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link " th:href="@{/cart}" href="#">cart</a>
+                </li>
+                <li class="nav-item active">
+                    <span class="nav-link " th:text="${cartCount}">0</span>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+	
+
+  <div class="bg-light">
+    <div class="container py-5">
+      <div class="row h-100 align-items-center py-5">
+        <div class="col-lg-6">
+          <h1 class="display-4">About us </h1>
+          <p class="lead text-muted mb-0">Welcome to Ankit Mega Mart, Your ultimate destination for all
+            things. Our team is dedicated to providing you with top-notch products and
+            an exceptional online shopping experience. Let us introduce you to the talented individuals who make it all
+            possible</p>
+          <!-- <p class="lead text-muted">Snippet by <a href="https://bootstrapious.com/snippets" class="text-muted">
+              <u>Bootstrapious</u></a>
+          </p> -->
+        </div>
+        <div class="col-lg-6 d-none d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png"
+            alt="" class="img-fluid"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white py-5">
+    <div class="container py-5">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+          <h2 class="font-weight-light">Our Goals</h2>
+          <p class="font-italic text-muted mb-4">At Ankit Mega Mart, we take pride in offering an extensive range of
+            products that combine unbeatable prices with top-notch quality. Our commitment to delivering value means you
+            can shop with confidence, knowing you're getting the best deals without compromising on excellence."</p><a
+            href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+        </div>
+        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img
+            src="https://bootstrapious.com/i/snippets/sn-about/img-1.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-5 px-5 mx-auto"><img src="https://bootstrapious.com/i/snippets/sn-about/img-2.jpg" alt=""
+            class="img-fluid mb-4 mb-lg-0"></div>
+        <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+          <h2 class="font-weight-light">collaborative Partners</h2>
+          <p class="font-italic text-muted mb-4">Our sourcing strategy combines the best of local craftsmanship and
+            global innovation. We partner with local artisans and international manufacturers to offer you a diverse
+            range of products.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-light py-5">
+    <div class="container py-5">
+      <div class="row mb-4">
+        <div class="col-lg-5">
+          <h2 class="display-4 font-weight-light">Our team</h2>
+          <p class="font-italic text-muted">Feel Free to Contact Us.</p>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <!-- Team item-->
+       
+        <!-- End-->
+
+        <!-- Team item-->
+        <div class="col-xl-4 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img
+              src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png" alt="" width="100"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Ankit upadhyay</h5><span class="small text-uppercase text-muted"></span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="https://github.com/Ankit-7459" class="social-link"><i class="fa fa-github"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/" class="social-link"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/ankit-upadhyay-58610a252/" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End-->
+
+        <!-- Team item-->
+        <div class="col-xl-4 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img
+              src="https://bootstrapious.com/i/snippets/sn-about/avatar-2.png" alt="" width="100"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Modassir hussain</h5><span class="small text-uppercase text-muted"></span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="https://github.com/Vishatalk" class="social-link"><i class="fa fa-github"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="https://instagram.com/mr_perfect_7461?igshid=NzZhOTFlYzFmZQ==" class="social-link"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/vishal-kumar-9647b5220/" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End-->
+        <div class="col-xl-4 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img
+              src="https://bootstrapious.com/i/snippets/sn-about/avatar-1.png" alt="" width="100"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Amit kumar</h5><span class="small text-uppercase text-muted"></span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="https://github.com/rajababu82" class="social-link"><i class="fa fa-github"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/yes_rajababu" class="social-link"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/yes-rajababu/" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      
+       
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+<footer class="p">
+  © Copyright 2023 - All rights reserved. Developed by My Team.
+      </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<style>
+  /* <!-- footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .contact-no {
+    font-size: 16px;
+  }
+  --> */
+  .social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  }
+
+  .social-link:hover,
+  .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+  }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

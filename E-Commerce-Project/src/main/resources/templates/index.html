@@ -45,6 +45,9 @@
                 <li class="nav-item active ">
                     <a class="nav-link " th:href="@{/index}" href="#">home</a>
                 </li>
+                 <li class="nav-item active ">
+                    <a class="nav-link " th:href="@{/Helper}" href="#">AboutInfo</a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link " th:href="@{/shop}" href="#">shop</a>
                 </li>
@@ -66,8 +69,145 @@
     </div>
 </nav>
 
-	
+	 <section class="container" id="Home">
+    
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner bg-light">
+        <div class="carousel-item active">
+          <img src="images/e-commerce-banner.jpg"
+            class="d-block w-100 mx-auto" alt="..." style="width: 1242px; height:400px ;">
+        </div>
+        <div class="carousel-item ">
+          <img src="images/e-commerce-banner.jpg"
+            class="d-block w-100 mx-auto" alt="..." style="width: 1242px; height:400px ;">
+        </div>
+        <div class="carousel-item">
+          <img src="images/e-commerce-banner.jpg"
+            class="d-block w-100 mx-auto" alt="..." style="width: 1242px; height:400px ;">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <hr>
+    <br>
+
+
+     
+    <div class="row">
+      <h1 style="text-align: left;">Products</h1>
+      <div class="col-md-3" id="budget">
+
+        <img src="https://www.financialexpress.com/wp-content/uploads/2023/01/2023-Mahindra-Thar-2.jpg?w=1024" alt=""
+          width="260px" height="100px">
+        <p><strong>Thar</strong></p>
+        <p><strong>Price:</strong> &#8377; 12,00,000</p>
+      </div>
+      <div class="col-md-3" id="budget">
+        <img src="https://m.media-amazon.com/images/I/41096oZc1HL._AC_UF1000,1000_QL80_.jpg" alt=""
+        width="260px" height="100px">
+        <p><strong>Teddy </strong></p>
+        <p><strong>Price:</strong> &#8377; 599</p>
+      </div>
+      <div class="col-md-3" id="budget">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn_U5e2TCaIo-b6CBBxdLNzA4EIX-pMLaDuA&usqp=CAU"
+          alt="" width="260px" height="100px">
+        <p><strong>Cycle</strong></p>
+        <p><strong>Price:</strong> &#8377; 7999</p>
+      </div>
+      
+      <div class="col-md-3" id="budget">
+        <img src="https://m.media-amazon.com/images/I/71Ksr+YG5sL.jpg" alt=""  width="260px" height="100px">
+        <p><strong>chocolate</strong></p>
+        <p><strong>Price:</strong> &#8377; 300</p>
+      </div>
+    </div>
+    <a class="btn btn-outline-dark text-center" th:href="@{shop}" id="buy" style="background-color:#49beb7 ;">see more</a>
+    <hr>
+    <div class="row">
+      <h2 style="text-align: left;">Top Deal</h2>
+      <div class="col" id="midRange">
+
+        <img src="https://m.media-amazon.com/images/I/81zSh9pyYhL._AC_UL480_FMwebp_QL65_.jpg"
+          alt=""  width="260px" height="100px">
+        <p><strong>Watch </strong></p>
+        <p><strong>Price:</strong> &#8377; 999</p>
+      </div>
+      <div class="col" id="midRange">
+        <img
+          src="https://m.media-amazon.com/images/I/7104SkxvhXL._AC_UL480_FMwebp_QL65_.jpg"
+          alt=""  width="260px" height="100px">
+        <p><strong>watch </strong></p>
+        <p><strong>Price:</strong> &#8377; 59990</p>
+      </div>
+      <div class="col" id="midRange">
+        <img
+          src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/e/f/-original-imagrgprbhchwgve.jpeg?q=70"
+          alt=""  width="260px" height="100px">
+        <p><strong>Laptop </strong></p>
+        <p><strong>Price:</strong> &#8377; 39999</p>
+      </div>
+      
+      <div class="col" id="midRange">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/h/n/n/-original-imagrrx6zmc5zdfm.jpeg?q=70"
+          alt="" width="260px" height="100px">
+        <p><strong>Airbuds</strong></p>
+        <p><strong>Price:</strong> &#8377; 1799</p>
+      </div>
+    </div>
+    <a class="btn btn-outline-dark" th:href="@{shop}" id="buy" style="background-color:#49beb7;">see more</a>
+    <br>
+    <hr>
+    <br>
+    <div class="row">
+      <h2 style="text-align: left;">Premium</h2>
+      <div class="col" id="premium">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/plate-tray-dish/v/c/3/melamine-11-inch-deluxe-melamine-banana-leaf-full-plate-for-original-imaghpftzk3f2zqz.jpeg?q=70"
+          alt=""  width="260px" height="100px">
+        <p><strong>Plates</strong></p>
+        <p><strong>Price:</strong> &#8377; 469</p>
+      </div>
+      <div class="col" id="premium">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/xif0q/jean/t/s/q/32-pm207368q078-pepe-jeans-original-imagqhdgcnexhpdw.jpeg?q=70"
+          alt=""  width="260px" height="100px">
+        <p><strong>Jeans </strong></p>
+        <p><strong>Price:</strong> &#8377; 1499</p>
+      </div>
+      <div class="col" id="premium">
+        <img
+          src="https://rukminim2.flixcart.com/image/612/612/l0e6kcw0/t-shirt/4/m/h/l-half-triangel-black-one-nb-nicky-boy-original-imagc747pchym7dg.jpeg?q=70"
+          alt=""  width="260px" height="100px">
+        <p><strong>T shrit</strong></p>
+        <p><strong>Price:</strong> &#8377; 299</p>
+      </div>
+      
+      <div class="col" id="premium">
+        <img
+          src="https://rukminim2.flixcart.com/image/416/416/xif0q/washing-machine-new/e/j/e/-original-imagnjr27tzs83vh.jpeg?q=70"
+          alt=""  width="260px" height="100px">
+        <p><strong>Washing Machine</strong></p>
+        <p><strong>Price:</strong> &#8377; 23000</p>
+      </div>
+    </div>
+    <a class="btn btn-outline-dark" th:href="@{shop}" id="buttn " >Explore More</a>
+    
+  </section>
+  <br>
+  <br>
   
+ 
+  <br>
     <footer class="p">
   © Copyright 2023 - All rights reserved. Developed by My Team.
       </footer>

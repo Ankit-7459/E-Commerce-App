@@ -43,6 +43,9 @@
                 <li class="nav-item active">
                     <a class="nav-link" th:href="@{/}" href="#">home</a>
                 </li>
+                 <li class="nav-item active ">
+                    <a class="nav-link " th:href="@{/Helper}" href="#">AboutInfo</a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link" th:href="@{/shop}" href="#">shop</a>
                 </li>
@@ -56,7 +59,7 @@
                     <a class="nav-link" th:href="@{/cart}" href="#">cart</a>
                 </li>
                 <li class="nav-item active">
-                    <span class="nav-link" th:text="${cartCount}">0</span>
+                    <span class="nav-link" th:text="${cartCount}"><i class="bi bi-cart"></i>0</span>
                 </li>
             </ul>
 
@@ -157,7 +160,10 @@
 
                             <a th:href="@{/checkout}" h class="btn btn-primary btn-block waves-effect waves-light">go to
                                 checkout</a>
-
+                                <form action="" method="get" th:action="@{/payment}" >
+                            <button type="submit"  class="btn btn-primary btn-block  bg-warning " >ByNow</button>
+                        </form>
+                              
                         </div>
                     </div>
                     <!-- Card -->

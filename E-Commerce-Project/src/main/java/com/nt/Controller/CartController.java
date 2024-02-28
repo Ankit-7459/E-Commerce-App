@@ -5,13 +5,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
+import com.nt.Model.Payment;
 import com.nt.Model.ProductInfo;
+import com.nt.Repository.PaymentRepo;
 import com.nt.Service.ProductService;
 import com.nt.global.GlobalData;
 
 @Controller
 public class CartController {
+	 @Autowired
+	    private PaymentRepo Payment_Repo;
+
 
 	@Autowired
 	ProductService ProductService;
@@ -39,9 +45,25 @@ public class CartController {
 		return"checkout";
 	}
 	
-	@GetMapping("/payNow")
-	public String payNow(Model model) {
-		model.addAttribute("total",GlobalData.cart.stream().mapToDouble(ProductInfo::getPrice).sum());
-		return"payNow";
-	}
+
+	
+	@GetMapping("/payment")
+	    
+	    public String payment(){
+	        return "payNow";
+	    }
+	    @PostMapping("/payment")
+	    public String saveUser(Payment newPayment) {
+	        System.out.println("*********");
+	        System.out.println("Data Inserted");
+	        System.out.println("**********");
+	        Payment_Repo.save(newPayment);
+	        System.out.println("***********************************************************************************************************************************************************");
+	        System.out.println("User product data......"+newPayment.toString());
+	        System.out.println("***********************************************************************************************************************************************************");
+	        System.out.println("***********************************************************************************************************************************************************");
+	        System.out.println("***********************************************************************************************************************************************************");
+	        
+	        return "OrderSuccessful";
+	    }       
 }

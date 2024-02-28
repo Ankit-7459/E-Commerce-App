@@ -53,6 +53,9 @@
                 <li class="nav-item active">
                     <a class="nav-link" th:href="@{/}" href="#">home</a>
                 </li>
+                 <li class="nav-item active ">
+                    <a class="nav-link " th:href="@{/Helper}" href="#">AboutInfo</a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link" th:href="@{/shop}" href="#">shop</a>
                 </li>
@@ -88,6 +91,9 @@
             </h5>
             <p th:text="${product.description}"></p>
             <a href="" th:href="@{/addToCart/{id}(id = ${product.id})}" class="btn btn-primary">Add to cart</a>
+             <form action="" method="get" th:action="@{/payment}" >
+                            <button type="submit"  class="btn btn-primary btn-block  bg-warning " style="width:110px;">ByNow</button>
+                        </form>
         </div>
     </div>
 </div>

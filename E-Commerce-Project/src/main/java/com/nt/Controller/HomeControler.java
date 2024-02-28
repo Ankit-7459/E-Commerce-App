@@ -29,10 +29,15 @@ public class HomeControler {
 	@Autowired
 	ProductService ProductService;
 	
-	@GetMapping({"/", "/home",})
+	@GetMapping({"/", "/index",})
 	public String home(Model model) {
 		model.addAttribute("cartCount",GlobalData.cart.size());
-		return"index";
+		return "index";
+	}
+	@GetMapping("/Helper")
+	public String Info(Model model) {
+		model.addAttribute("cartCount",GlobalData.cart.size());
+		return"Info";
 	}
 	@GetMapping("/shop")
 	public String shop(Model model) {

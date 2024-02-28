@@ -11,14 +11,27 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 
     <title>Document</title>
+     <style>
+     footer{background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  
+    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); 
+ 
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;}
+    
+    </style>
 </head>
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-light  " >
+<nav class="navbar navbar-expand-lg navbar-light  bg-secondary" >
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img th:src="@{/images/logo.png}"  src="../static/images/logo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/>
+           <img th:src="@{/images/ecomarcelogo.png}"  src="../static/images/ecomarcelogo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/><span>AnkitDataMart</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -190,7 +203,7 @@
                             </li>
                         </ul>
 
-                        <form action="" method="post" th:action="@{/payNow}" >
+                        <form action="" method="get" th:action="@{/payNow}" >
                             <button type="submit"  class="btn btn-primary btn-block waves-effect waves-light">Pay Now</button>
                         </form>
 
@@ -231,6 +244,9 @@
 
 
 </div>
+  <footer class="p">
+  © Copyright 2023 - All rights reserved. Developed by My Team.
+      </footer>
 
 
 

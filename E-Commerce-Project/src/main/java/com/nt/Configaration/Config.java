@@ -61,7 +61,7 @@ public class Config {
 	        auth .userDetailsService(CustomUserDetailsService);
 	    }
 	 public void configure(WebSecurity web) {
-	        web.ignoring().requestMatchers("/resoures/**", "/static/**","/images/**","/productImages/**");
+	        web.ignoring().requestMatchers("/resources/**", "/static/**","/images/**","/productImages/**");
 	    }
 
 }

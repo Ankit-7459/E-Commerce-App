@@ -34,8 +34,8 @@ public class CartController {
 		model.addAttribute("cart",GlobalData.cart);
 		return"cart";
 	}
-	@GetMapping("/cart/removeItems/{index}")
-	  public String cartItemsRemovede(@PathVariable Integer index) {
+	@GetMapping("/cart/removeItem/{index}")
+	  public String cartItemsRemovede(@PathVariable Long index) {
 		GlobalData.cart.remove(index);
 		return"redirect:/cart";
 	}

@@ -31,13 +31,13 @@
     width: 100%;}
     </style>
 </head>
-<body >
+<body class="bg-success" >
 
 
 <nav class="navbar navbar-expand-lg navbar-light  bg-secondary" >
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img th:src="@{/images/ecomarcelogo.png}"  src="../static/images/ecomarcelogo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/><span>AnkitDataMart</span>
+            <span>AnkitDataMart</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -86,19 +86,17 @@
         </div>
        
 	        <div class="col-sm-9">
-			        
-					        
-					            <div class="card bg-info" style="margin-top: 20px" th:each="product : ${products}">
+					            <div class="card bg-primary" style="margin-top: 20px" th:each="product : ${products}">
 					                <div class="row no-gutters">
 					                    <div class="col-sm-5 d-flex justify-content-center">
-					                        <img class="" height="150px" width="150px" th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
+					                        <img class="" height="200px" width="200px" th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
 					                    </div>
 					                    <div class="col-sm-7 d-flex justify-content-center">
 					                        <div class="card-body">
 					                            <h5 class="card-title" th:text="${product.name}"></h5>
 					                            <h4>₹ <span th:text="${product.price}"></span></h4>
 					                            <p th:text="${product.description}" > Product Description.</p>
-					                            <a href="#" th:href="@{/shop/viewproduct/{id}(id=${product.id})}" class="btn btn-primary">View Product</a>
+					                            <a href="#" th:href="@{/shop/viewproduct/{id}(id=${product.id})}" class="btn btn-dark">View Product</a>
 					                        </div>
 					                    </div>
 					                </div>

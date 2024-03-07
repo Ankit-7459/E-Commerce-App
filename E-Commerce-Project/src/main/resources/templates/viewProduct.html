@@ -34,13 +34,13 @@
     
     </style>
 </head>
-<body>
+<body class="bg-success">
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-              <img th:src="@{/images/ecomarcelogo.png}"  src="../static/images/ecomarcelogo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/><span>AnkitDataMart</span>
+              <span>AnkitDataMart</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,7 +91,7 @@
             </h5>
             <p th:text="${product.description}"></p>
             <a href="" th:href="@{/addToCart/{id}(id = ${product.id})}" class="btn btn-primary">Add to cart</a>
-             <form action="" method="get" th:action="@{/payment}" >
+             <form action="" method="get" th:action="@{/checkout}" >
                             <button type="submit"  class="btn btn-primary btn-block  bg-warning " style="width:110px;">ByNow</button>
                         </form>
         </div>

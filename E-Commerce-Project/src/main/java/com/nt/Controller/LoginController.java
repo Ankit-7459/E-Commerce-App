@@ -49,7 +49,7 @@ public String registerPost(@ModelAttribute("user")User user,HttpServletRequest r
      user.setRoles(role);
      UserRepository.save(user);
      request.login(user.getEmail(), password);
-	return"redirect:/home";
+	return"redirect:/index";
 	
 }
 }

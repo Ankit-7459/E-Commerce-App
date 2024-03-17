@@ -13,11 +13,11 @@
     <title>Document</title>
     <style type="text/css">
     
-    .card{
+    .card-scal{
      transform:all 0.3s;
     }
-     .card:hover{
-      transform:scale(1.15);
+     .card-scal:hover{
+      transform:scale(1.05);
      }
       footer{background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  
     background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); 
@@ -88,10 +88,10 @@
 </nav>
 <div class="container-fluid" style="margin-top: 30px">
     <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-3">
 
             <ul class="list-group">
-                <a th:href="@{/shop}"><li class="list-group-item bg-dark border rounded rounded-top">All Categories</li></a>    
+                <a th:href="@{/shop}"><li class="list-group-item bg-dark border rounded rounded-top ">All Categories</li></a>    
                 <a href="" th:each="category, iStat : ${categories}"
                    th:href="@{/shop/category/{id}(id=${category.id})}"><li
                                class="list-group-item text" th:text="${category.name}"></li></a>
@@ -99,13 +99,13 @@
 
         </div>
        
-	        <div class="col-sm-9">
+	        <div class="col-sm-6">
 					            <div class="card" style="margin-top: 20px" th:each="product : ${products}">
-					                <div class="row no-gutters">
+					                <div class="row no-gutters card-scal">
 					                    <div class="col-sm-6 d-flex justify-content-center">
 					                        <img class="" height="200px" width="200px" th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
 					                    </div>
-					                    <div class="col-sm-4 d-flex justify-content-center">
+					                    <div class="col-sm-6 d-flex justify-content-center">
 					                        <div class="card-body">
 					                            <h5 class="card-title" th:text="${product.name}"></h5>
 					                            <h4>₹ <span th:text="${product.price}"></span></h4>

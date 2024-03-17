@@ -42,12 +42,15 @@
         <button class="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+         
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
                 <li class="nav-item active ">
                     <a class="nav-link text-white" th:href="@{/index}" href="#">home</a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link text-white" th:href="@{/admin}" href="#">Admin</a>
                 </li>
                  <li class="nav-item active ">
                     <a class="nav-link text-white" th:href="@{/Helper}" href="#">AboutInfo</a>
@@ -118,7 +121,6 @@
     <hr>
     <br>
     
-    
     <div class="row">
       <h1 style="text-align: left;">Products</h1>
       <div class="col-md-3" id="budget">
@@ -147,7 +149,7 @@
         <p><strong>Price:</strong> &#8377; 300</p>
       </div>
     </div>
-    <a class="btn btn-outline-dark text-center" th:href="@{shop}" id="buy" style="background-color:#49beb7 ;">see more</a>
+    <a class="btn btn-outline-dark bg-primary text-center" th:href="@{shop}" id="buy" style="background-color:#49beb7 ;">see more</a>
     <hr>
     <div class="row">
       <h2 style="text-align: left;">Top Deal</h2>
@@ -181,7 +183,7 @@
         <p><strong>Price:</strong> &#8377; 1799</p>
       </div>
     </div>
-    <a class="btn btn-outline-dark" th:href="@{shop}" id="buy" style="background-color:#49beb7;">see more</a>
+    <a class="btn btn-outline-dark bg-info" th:href="@{shop}" id="buy" >see more</a>
     <br>
     <hr>
     <br>
@@ -217,7 +219,7 @@
         <p><strong>Price:</strong> &#8377; 23000</p>
       </div>
     </div>
-    <a class="btn btn-outline-dark" th:href="@{shop}" id="buttn " >Explore More</a>
+    <a class="btn btn-outline-primary bg-dark" th:href="@{shop}" id="buttn"  >Explore More</a>
     
   </section>
   <br>
@@ -225,8 +227,7 @@
   <br>
   <br>
     <footer class="p">
-     
-  © Copyright 2023 - All rights reserved. Developed by My Team.
+        © Copyright 2023 - All rights reserved. Developed by My Team.
       </footer>
 
 

@@ -34,11 +34,12 @@ public class HomeControler {
 		model.addAttribute("cartCount",GlobalData.cart.size());
 		return "index";
 	}
-	@GetMapping("/Helper")
+	@GetMapping("/my-info")
 	public String Info(Model model) {
 		model.addAttribute("cartCount",GlobalData.cart.size());
 		return"Info";
 	}
+	
 	@GetMapping("/shop")
 	public String shop(Model model) {
 		model.addAttribute("categories", CategoryService.ShowAllCategory());

@@ -17,7 +17,7 @@ public class Payment {
 	    private String cardnumber;
 	    private String cardholder;
 	    private String cvv;
-	    private Double payment;
+	    
 	    
 	   
 }

@@ -42,13 +42,12 @@ public class CartController {
 	@GetMapping("/checkout")
 	public String checkout(Model model) {
 		model.addAttribute("total",GlobalData.cart.stream().mapToDouble(ProductInfo::getPrice).sum());
-		return"checkout";
+		return"payNow";
 	}
 	
 
 	
 	@GetMapping("/payment")
-	    
 	    public String payment(){
 	        return "payNow";
 	    }
@@ -63,7 +62,7 @@ public class CartController {
 	        System.out.println("***********************************************************************************************************************************************************");
 	        System.out.println("***********************************************************************************************************************************************************");
 	        System.out.println("***********************************************************************************************************************************************************");
-	        
+	    
 	        return "OrderSuccessful";
 	    }       
 }

@@ -4,10 +4,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
 @Data
+@Table(name="Payment_details")
 public class Payment {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -15,15 +17,7 @@ public class Payment {
 	    private String cardnumber;
 	    private String cardholder;
 	    private String cvv;
+	    private Double payment;
 	    
-	    
-	    private String firstName;
-	    private String lastname;
-	    private String AddressLine1;
-	    private String AddressLine2;
-	    private Double Postcode_ZIP;
-	    private String Town_City;
-	    private Long Phone;
-	    private String Email;
-        private String Additionalinformation;
+	   
 }

@@ -34,7 +34,7 @@ public class HomeControler {
 		model.addAttribute("cartCount",GlobalData.cart.size());
 		return "index";
 	}
-	@GetMapping("/my-info")
+	@GetMapping("/Helper")
 	public String Info(Model model) {
 		model.addAttribute("cartCount",GlobalData.cart.size());
 		return"Info";
